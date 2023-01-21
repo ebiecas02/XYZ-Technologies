@@ -1,0 +1,7 @@
+---
+- hosts: kubernetes
+  become: true
+
+  tasks:
+  - name: Deploy XYZ Technologies Admin Module on Kubernetes
+    command: kubectl apply -f /root/XYZtechnologies-service.yml

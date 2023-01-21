@@ -1,0 +1,18 @@
+---
+- hosts: dockerhost
+
+  tasks:
+  -name: Stop An Existing Container if Running
+  command: docker stop devops-project2
+  ignore_errors: yes
+
+- name: Remove the Container if it exists
+  command: docker rm devops-project2
+  ignore_errors: yes
+
+- name: Remove the Image if it exists
+  command: docker rmi ebiecas/project2-tomcat
+  ignore_errors: yes
+
+- name: Create Container for XYZ Technologies
+  command: docker run -d --name devops-project2 -p 8082:8080 ebiecas/project2-tomcat

@@ -1,0 +1,9 @@
+#Example Hosts File for Jenkins -> Ansible - > Docker / Kubernetes Integration , Works on localhost, vm , Ec2 instance, etc
+localhost
+
+[kubernetes]
+172.31.36.48
+
+[ansible]
+172.31.47.93
+

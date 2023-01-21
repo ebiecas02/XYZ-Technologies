@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+name: project2
+spec:
+containers:
+
+name: project2-container
+image: ebiecas/project2-tomcat
+ports:
+containerPort: 8080
